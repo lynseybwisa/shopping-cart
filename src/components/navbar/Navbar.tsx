@@ -1,15 +1,17 @@
 import React from "react";
+import { Button } from "../button/Button";
 import NavItem from "./NavItem";
+import { FaShoppingBag } from 'react-icons/fa'
 
 const Navbar = () => {
   return (
     <>
-      <nav className="z-10 py-4 w-full border-b border-gray-200 dark:border-gray-600">
+      <nav className="z-10 py-2 w-full border-b border-gray-200 dark:border-gray-600">
         <div className="container flex flex-wrap items-center justify-between h-full px-4 mx-auto">
           <a href="https://flowbite.com/" className="flex items-center">
             <img
               src="https://flowbite.com/docs/images/logo.svg"
-              className="h-6 mr-3 sm:h-9"
+              className="h-3 mr-3 sm:h-6"
               alt="Flowbite Logo"
             />
             <span className="self-center text-xl font-semibold whitespace-nowrap dark:text-white">
@@ -24,8 +26,9 @@ const Navbar = () => {
               <NavItem text="Home" routeHref="/" />
               <NavItem text="About" routeHref="/about" />
               <NavItem text="Store" routeHref="/store" />
-              <li></li>
+              
             </ul>
+            <Button type="iconRight" icon={<FaShoppingBag size="20"/> }/>
           </div>
         </div>
       </nav>
